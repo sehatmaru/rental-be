@@ -5,7 +5,7 @@ FROM openjdk:21-jdk-slim
 RUN apt-get update && apt-get install -y gradle
 
 # Set the working directory inside the container
-#WORKDIR /app
+WORKDIR /
 
 # Copy the Gradle project files into the container
 #COPY build.gradle .
