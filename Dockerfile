@@ -7,7 +7,7 @@ WORKDIR /app
 RUN ./gradlew clean build -x test --no-daemon
 
 # Copy the built Spring Boot jar into the container
-COPY build/libs/spv-1-SNAPSHOT.jar /app/app.jar
+COPY build/libs/rental-1-SNAPSHOT.jar /app/app.jar
 
 # Expose the port your application will run on
 EXPOSE 8080
