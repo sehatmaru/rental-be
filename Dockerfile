@@ -4,6 +4,8 @@ FROM openjdk:21-jdk-slim
 # Set the working directory inside the container
 WORKDIR /app
 
+RUN ./gradlew clean build -x test --no-daemon
+
 # Copy the built Spring Boot jar into the container
 COPY build/libs/spv-1-SNAPSHOT.jar /app/app.jar
 
